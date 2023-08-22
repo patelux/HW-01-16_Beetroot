@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header container">
+      <form action="#">
+        <!-- input search -->
+        <div class="form-field">
+           <input type="search" id="search" name="q" minlength="3" size="40" placeholder="Введіть пошуковий запит" style="height: 40px;">
+            <button class="btn" style=" font-weight: 600; margin-left: 20px; height: 40px; padding: 0 10px;">Пошук</button>                   
+          </div>
+
+      </form>
+          
+
+    </header>
+
+    <main class="main">
+        <section class="container">
+            <h1 hidden>Forms examples</h1>
+            <h2 class="form-title">Форма заповнення персональних данних</h2>
+            <!-- Form -->
+            <form class="form" action="#">
+
+                <!-- text input -->
+              <fieldset>
+                <div class="form-field">
+                    <label class="form-label" for="user_name">Повне ім'я</label>
+                    <input class="form-input" type="text" name="user_name" id="user_name" placeholder="Введіть повне ім'я" maxlength="30" required>
+                </div>
+
+
+                <!-- email input -->
+                <div class="form-field">
+                    <label class="form-label" for="user_email">Email</label>
+                    <input class="form-input" type="email" name="user_email" id="user_email" placeholder="Введіть свій email" required>
+                </div>
+
+
+                <!-- password input -->
+                <div class="form-field">
+                    <label class="form-label" for="user_password1">Пароль</label>
+                    <input class="form-input" type="password" name="user_password1" id="user_password1" value="" minlength="6">
+                </div> 
+                <div class="form-field">
+                    <label class="form-label" for="user_password2">Пароль ще раз</label>
+                    <input class="form-input" type="password" name="user_password2" id="user_password2" value="" minlength="6">
+                </div>
+
+
+                <!-- radiobutton -->
+                <div class="form-field">
+                <h3 class="form-label">Стать</h3>
+                <input type="radio" name="user_gender" id="user_gender_male" value="male" checked>
+                <label class="gender-label" for="user_gender_male">чоловіча</label>
+                
+                <input type="radio" name="user_gender" id="user_gender_female" value="female">
+                <label class="gender-label" for="user_gender_female">жіноча</label>
+                </div>
+
+
+
+                <!--number input-->
+                <div class="form-field">
+                <label class="form-label" for="user_age">Вік</label>
+                <input class="form-input age" type="number" name="user_age" id="user_age" value="" max="100" min="14" required>
+                </div>
+
+
+                <!--select  -->
+                <div class="form-field">
+                <label class="form-label" for="curse_type">Курс</label>
+                <select class="form-input" name="curse_type" id="curse_type">
+                    <option value="1">Front-End</option>
+                    <option value="2">Back-End</option>
+                    <option value="3">Project Management</option>
+                    <option value="4">QA Manual</option>
+                </select>
+                </div>
+
+
+                <!-- textarea -->
+                <div class="form-field">
+                <label class="form-label" for="user_adress">Повна адреса</label>
+                <textarea name="user_adress" id="user_adress" cols="30" rows="10" maxlength="100" placeholder="Введіть адресу" required></textarea>
+                </div>
+
+
+                <!-- checkbox -->
+                <div class="form-field">
+                <input id="privacy" type="checkbox" class="input-check" name="privacy" value="true" required>
+                <label for="privacy" class="check-text">Погоджуюся з обробкою персональних даних
+                </label>
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="button-field">
+                <input class="submit-btn btn" type="reset" id="reset" value="Очистити форму">
+                <button class="submit-btn btn" type="submit" id="submit_btn" value="">Зареєструватися</button>
+                </div>
+
+
+              </fieldset>
+            </form>
+        </section>
+        <section class="container">
+            <form action="#">
+              <fieldset>
+                    <!-- input files -->
+                <div class="form-field">
+                     <label class="form-label additional" for="user_pdf">Виберіть файл у форматі user_pdf</label>
+                    <input  class="form-input" type="file" name="user_pdf" id="user_pdf">
+                </div>
+                    <!-- input range -->
+                <div class="form-field">
+                    <label  class="form-label additional" for="range">Введіть рейтинг від 1 до 10</label>
+                    <input  class="form-input"  type="range" name="range" id="range" max="10" min="1">
+                </div>         
+                    <!-- input phone -->
+                <div class="form-field">
+                    <label  class="form-label additional" for="user_phone">Введіть номер телефону</label>
+                    <input  class="form-input"  type="tel" name="user_phone" id="user_phone" value="+(380) xx xx xxx">  
+                </div>
+                    <!-- input date -->                
+                <div class="form-field">
+                    <label class="form-label additional" for="user_date">Введіть дату народження</label>
+                    <input  class="form-input"  type="date" name="user_date" id="user_date" value="" min="1921-01-01">
+                </div>
+              </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,337 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+input, button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+* {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  color: #333333;
+  background-color: #FFF;
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: calc(24/14);
+}
+
+.page_wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+
+.nav_item:hover, .nav_item:focus {
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+}
+
+.nav_link {
+  display: inline-block;
+  font-family: inherit;
+  letter-spacing: 0.66px;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.team .container {
+  padding-top: 121px;
+  padding-bottom: 121px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-title {
+  text-align: center;
+  color: #898F8F;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(24/18);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  text-align: center;
+  color: #FC0;
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: calc(66/60);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.logo-img-wrapper {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.logo-img-wrapper img {
+  width: 100%;
+}
+.logo-img-wrapper::before, .logo-img-wrapper::after {
+  content: "";
+  display: block;
+  width: 210px;
+  height: 1px;
+  background-color: #FFCC00;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+.logo-img-wrapper::after {
+  left: 25px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-wrapper div:not(:first-child) {
+  border-top: 1px solid #FFCC00;
+}
+@media screen and (min-width: 1200px) {
+  .card-wrapper {
+    flex-direction: row;
+  }
+  .card-wrapper div:not(:first-child) {
+    border-left: 1px solid #FFCC00;
+    border-top: none;
+  }
+}
+
+.photo-wrapper, .profile-wrapper {
+  flex-basis: 50%;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-wrapper {
+  box-sizing: content-box;
+  max-width: 400px;
+  max-height: 400px;
+  display: inline-block;
+  border: 2px solid #FFCC00;
+  padding: 15px;
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+  z-index: 2;
+  position: relative;
+}
+
+.img-wrapper:before,
+.img-wrapper:after {
+  content: "";
+  z-index: 1;
+  display: block;
+  position: absolute;
+  background: #FFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.img-wrapper:before {
+  width: calc(100% + 10px);
+  height: 230px;
+  transition: height 0.5s ease;
+}
+
+.img-wrapper:after {
+  height: calc(100% + 10px);
+  width: 230px;
+  transition: width 0.5s ease;
+}
+
+.img-wrapper:hover:before,
+.img-wrapper:focus:before {
+  height: 75%;
+}
+
+.img-wrapper:hover:after,
+.img-wrapper:focus:after {
+  width: 75%;
+}
+
+.profile-title {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: capitalize;
+  color: #666666;
+  padding-bottom: 60px;
+}
+.profile-title::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  border: 1px solid #FFCC00;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-subtitle {
+  text-transform: capitalize;
+  padding-bottom: 30px;
+}
+
+.profile-description {
+  max-width: 430px;
+  position: relative;
+  margin-bottom: 54px;
+}
+.profile-description::after {
+  content: "";
+  display: inline-block;
+  min-width: 50px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #FFCC00 0 10px, transparent 10px 15px, #FFCC00 15px 35px, transparent 35px 40px, #FFCC00 40px 50px);
+}
+
+.social-link-item {
+  margin-bottom: 49px;
+}
+
+.social-link-list {
+  display: flex;
+  gap: 5px;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #CCCCCC;
+  border-radius: 50%;
+  color: #CCCCCC;
+  background-color: transparent;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover, .social-link:focus {
+  border-style: none;
+  background-color: #FFCC00;
+  color: #fff;
+}
+
+.icon-social-link {
+  fill: currentColor;
+  transition: fill 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-social-link:hover .icon-social-link:focus {
+  fill: currentColor;
+}
+
+.btn_profile {
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: calc(14/14);
+  text-transform: uppercase;
+  border: 1px solid #FFCC00;
+  padding: 5px 10px;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn_profile:hover, .btn_profile :focus {
+  background-color: #FFCC00;
+  color: #FFF;
+}

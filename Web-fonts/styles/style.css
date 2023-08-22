@@ -1,0 +1,175 @@
+@import './variables.css';
+/* 
+font-family: 'Farro', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'Tourney', cursive; */
+/* <span class="material-icons">
+local_pizza
+</span> */
+* {
+    transition: all .15s ease-in;
+}
+
+body {
+    color: var(--main-color);
+    background-color: var(--main-bg-color);
+    font-family:"PT Sans",  Arial, Helvetica, sans-serif;
+    font-size:  28px;
+    font-weight: 400;
+    line-height: calc(48/28);
+}
+.page_wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .container{
+    background-color: var(--main-bg-color);
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main_nav {
+    display: flex;
+    align-items:center;
+}
+
+.lang {
+    font-family: 'Tourney', cursive;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: calc(18/22);
+    letter-spacing: 0.88px;
+    text-transform: uppercase;
+}
+.lang span{
+    letter-spacing: 1.32px; 
+    margin-right: 50px;   
+}
+
+.nav_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_item:first-child .nav_link::after {
+    content: '/';
+    color: #000;
+    font-family: 'Staatliches', cursive;
+    font-size: 22px;
+    letter-spacing: 0.66px;
+    margin-left: 10px;
+}
+.nav_link {
+    display: inline-block;
+    font-family: 'Staatliches', cursive;
+    font-size: 22px;
+    letter-spacing: 0.66px;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.nav_link:hover, .nav_link:focus  {
+    font-weight: 700;
+}
+
+a.logo{
+    width: 238px;
+    /* height: 54px; */
+}
+.logo_img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+/* MAIN SECTION */
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 99px;
+}
+
+.hero_box {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 99px;
+}
+.chapters_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 70px 0 90px;
+}
+
+.main_title {
+    display: none;
+}
+.chapters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+/* 
+.chapters-item {
+
+} */
+
+.chapter-title {
+    font-family: 'Francois One', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.chapter-title span {
+    font-family: 'Farro', sans-serif;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+}
+
+.chapter_text {
+    line-height: 48px;
+}
+.chapter_accent-text {
+    text-decoration: underline;
+}
+.chapter_accent-text-italic{
+    font-style: italic;
+}
+.chapter_accent-text-bold{
+    font-weight: 700;
+}
+.chapter_accent-text-bg, pre code{
+    background-color: rgb(128, 128, 128, 0.3);
+}
+
+.chapter_sublist{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

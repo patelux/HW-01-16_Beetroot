@@ -1,0 +1,13 @@
+* {
+    transition: all $transitionFunc;
+}
+body {
+color: $primaryTextColor;
+background-color: $primaryBgColor;
+text-transform: capitalize;
+text-align: center;
+font-family: $primaryFontFam;
+font-size: 14px;
+font-weight: 500;
+line-height: calc(24/14);
+}

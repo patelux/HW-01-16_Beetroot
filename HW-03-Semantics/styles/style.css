@@ -1,0 +1,144 @@
+/* .header {
+    background-color: aqua;
+} */
+
+.main_title {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: calc(27/22);
+    margin-bottom: 40px;
+}
+.main__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: start;
+    align-items: center;
+}
+.main__item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(24/14);
+    color: #595959;
+    list-style: none;
+}
+
+.main__link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24/14);
+    text-transform: uppercase;
+    color: blue;
+
+}
+
+.main__link:hover,
+.main__link:focus,
+.main__link:active {
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.article__list-link{
+    display: flex;
+}
+
+/* .main {
+    background-color: #ffe4c4;
+} */
+
+.article_example {
+        margin-bottom: 40px;
+}
+
+.article__paragraph-text {
+        font-weight: 400;
+        line-height: calc(27/22);
+        margin-bottom: 20px;
+}
+
+.article__paragraph-text-accent {
+        font-weight: 600;
+}
+
+.article-subtitle {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: calc(27/22);
+        margin-bottom: 40px;
+}
+
+.article__list-link {
+        display: flex;
+        gap: 12px;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+}
+
+.article__link {
+        font-weight: 500;
+        line-height: calc(24/14);
+        text-decoration: underline;
+        color: blue;
+}
+
+.article__list {
+    list-style: disc;
+    color: #272727;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.sublist__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+.sublist__link{
+    color: #272727;
+}
+.teg_accent{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+.iframe_CV{
+    justify-content: start;
+    margin-bottom: 80px;
+}
+.cv-iframe {
+    width: 60em;
+    height: 800px;
+}
+.iframe_youtube {
+        width: 60em;
+        height: 800px;
+        margin-bottom: 80px;
+}
+.code_example {
+    background-color:rgba(211, 211, 211, 0.3);
+    padding: 4px 0 8px 10px;
+    width: 640px;
+}
+
+.code_example-subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: .03rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+pre{
+    font-size: 14px;
+    background-color: #fff;
+    padding: 4px;
+    border-left: solid 5px green;
+    margin: 0;
+
+}
+pre span {
+   color: rgb(129, 42, 42); 
+}

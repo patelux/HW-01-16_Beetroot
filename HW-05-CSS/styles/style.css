@@ -1,0 +1,260 @@
+/* 
+base text color #070707
+base title color #070707
+accent text color #828282
+background main color #ffffff
+backgroung accent color #F6F6F6
+btn text color #070707
+accent btn bgcolor #2196F3
+star main color #E5E5E5
+star accent color #070707
+
+*/
+* {
+    transition: all .15s ease-in;
+}
+
+body {
+    color: #070707;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.container {
+    width: 90%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.main_nav {
+    border-bottom: 1px solid #828282;
+}
+
+.nav_list {
+    font-size: 0;
+    text-align: center;
+}
+
+.nav_item {
+    display: inline-block;
+}
+
+.nav_link {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #828282;
+    padding: 25px 20px;
+
+}
+
+.text_lowercase {
+    text-transform: lowercase;
+}
+.nav_link:hover, .nav_link:focus  {
+    font-weight: 700;
+}
+
+.nav_link.active {
+    color: #070707;
+}
+
+.main {
+    margin-top: 12px;
+}
+
+.main_title {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+
+.image_wrapper {
+    width: 100%;
+}
+
+.section {
+    text-align: center;
+    padding: 100px 0;
+
+}
+.about, .portfolio {
+    background-color: #F6F6F6;
+}
+
+.section_title {
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.mb-50 {
+margin-bottom: 50px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+.about_content {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.section_text:not(:last-child) {
+    margin-bottom: 30px;
+}
+.section.skills {
+    background-color: #fff;
+}
+.card_wrapper {
+    margin: 0;
+    margin-top: 50px;
+}
+
+.skills_card-list {
+    width: 100%;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 96px;
+    justify-content: center;
+}
+
+.skills_card-item {
+    text-align: center;
+    width: 170px;
+}
+
+
+.skills_card-img {
+    width: 80px;
+    margin: 0 auto 25px;
+}
+.skills_card-img.figma{
+    height: 79px;
+    margin: 0 auto 25px;
+}
+.skills_card-text {
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #828282;
+    margin: 0 auto;
+}
+
+.skills_cardrate-list {
+    width: 100%;
+    font-size: 0;
+    margin-top: 60px;
+}
+.skills_cardrate-list.figma{
+    margin-top: 80px;
+}
+
+.skills_cardrate-item {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    background-image: url(../img/star-icon.svg);
+}
+.skills_cardrate-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.skills_cardrate-item.active {
+    background-image: url(../img/star_active-icon.svg);
+}
+
+.portfolio_card-wrapper {
+    margin: 0;
+}
+
+.portfolio_card_list {
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio_card-item:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.portfolio_card-img {
+    width: 100%;
+    margin-bottom:40px;
+}
+
+.portfolio_card-text {
+    width: 260px;
+    display: inline-block;
+}
+
+.contacts_text {
+    width: 280px;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+.contacts_btn {
+    width: 180px;
+    height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+    border-radius: 22px;
+    background-color: #070707;
+    padding: 10px 16px;
+    margin: 0 auto 30px;
+}
+
+.contacts_btn:hover, .contacts_btn:focus {
+    background-color: #2196F3;
+}
+
+.social_link-wrapper {
+    margin: 0;
+}
+
+.social_links-list {
+    width: 100%;
+    font-size: 0;
+    margin-bottom: 60px;        
+}
+
+.social_links-item {
+    display: inline-block;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.social_links-item:hover, .social_links-item:focus {
+    opacity: 0.5;
+}
+.social_links-item:first-child {
+    padding-left: 0;
+    padding-right: 25px;
+}
+.social_links-item:last-child {
+    padding-left: 25px;
+    padding-right: 0;
+}    
+
+.social_links-img {
+    width: 40px;
+    height: 40px;
+}
+
+.social_link-text{
+    width: 200px;
+    font-size: 14px;
+    color: #828282;
+    margin: 0 auto;
+}

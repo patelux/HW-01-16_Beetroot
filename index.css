@@ -1,0 +1,37 @@
+.main_title {
+    color: #595959;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: calc(27/22);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main__item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(24/14);
+    color: #595959;
+    list-style: none;
+}
+
+.main__link {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24/14);
+    text-transform: uppercase;
+    color: blue;
+
+}
+.main__link:hover,
+.main__link:focus,
+.main__link:active {
+    font-weight: 900;
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
