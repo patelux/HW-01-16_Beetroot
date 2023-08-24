@@ -63,21 +63,67 @@ body {
   margin: 0 auto;
 }
 
+@keyframes card-rotate-front {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  90% {
+    transform: perspective(600px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+@keyframes card-rotate-back {
+  0% {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  90% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+}
 .main .container {
   padding: 400px 0;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
   cursor: pointer;
+  position: relative;
   width: 340px;
   height: 480px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
-.card:hover > .card-front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.card:hover > .card-back {
+.card > .card-front {
+  animation-name: "card-rotate-front";
   transform: perspective(600px) rotateY(0deg);
+}
+.card > .card-back {
+  animation-name: "card-rotate-back";
+  transform: perspective(600px) rotateY(-180deg);
+  background-color: #FFF;
+}
+.card > .card-back.active {
+  animation-play-state: running;
+}
+.card:hover > .card-front, .card.active > .card-front {
+  animation-play-state: running;
+}
+.card:hover > .card-back, .card.active > .card-back {
+  animation-play-state: running;
 }
 
 .card-front,
@@ -89,21 +135,18 @@ body {
   position: absolute;
   border-radius: 20px;
   transform: perspective(600px);
-  transition: all 1s ease;
-  outline: 1px solid tomato;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: backwards;
+  animation-play-state: paused;
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.53);
 }
 .card-front img,
 .card-back img {
   height: 100%;
-}
-
-.card-front {
-  transform: perspective(600px) rotateY(0deg);
-}
-
-.card-back {
-  transform: perspective(600px) rotateY(180deg);
-  background-color: #FFF;
 }
 
 h1 {
@@ -119,7 +162,7 @@ h1 {
   justify-content: space-between;
   text-align: center;
   color: #565656;
-  padding: 40px;
+  padding: 10px;
 }
 
 .left-corner, .right-corner {
@@ -127,10 +170,14 @@ h1 {
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 10px;
+}
+.left-corner > *, .right-corner > * {
+  max-height: 32px;
 }
 .left-corner > p, .right-corner > p {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .left-corner {
@@ -145,23 +192,15 @@ h1 {
 i {
   display: block;
   margin: 20px 0;
-  color: #007FFC;
-  font-size: 30px;
+  color: #9b3131;
+  font-size: 42px;
 }
 
 .card-title {
-  font-size: 32px;
+  font-size: 54px;
   font-weight: 700;
 }
 
-.center-text {
-  font-size: 64px;
-  font-weight: 900;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.center-text i {
+  font-size: 120px;
 }
