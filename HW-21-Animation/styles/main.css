@@ -103,27 +103,30 @@ body {
 .card {
   cursor: pointer;
   position: relative;
-  width: 340px;
-  height: 480px;
+  width: 170px;
+  height: 240px;
   border-radius: 20px;
 }
 .card > .card-front {
-  animation-name: "card-rotate-front";
+  animation-name: none;
   transform: perspective(600px) rotateY(0deg);
 }
 .card > .card-back {
-  animation-name: "card-rotate-back";
+  animation-name: none;
   transform: perspective(600px) rotateY(-180deg);
   background-color: #FFF;
 }
-.card > .card-back.active {
-  animation-play-state: running;
+.card > .card-back.active > .card-front {
+  animation-name: "card-rotate-front";
+}
+.card > .card-back.active > .card-back {
+  animation-name: "card-rotate-back";
 }
 .card:hover > .card-front, .card.active > .card-front {
-  animation-play-state: running;
+  animation-name: "card-rotate-front";
 }
 .card:hover > .card-back, .card.active > .card-back {
-  animation-play-state: running;
+  animation-name: "card-rotate-back";
 }
 
 .card-front,
@@ -138,10 +141,9 @@ body {
   animation-duration: 2s;
   animation-timing-function: ease;
   animation-delay: 0s;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-direction: normal;
   animation-fill-mode: backwards;
-  animation-play-state: paused;
   box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.53);
 }
 .card-front img,
@@ -170,10 +172,6 @@ h1 {
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
-}
-.left-corner > *, .right-corner > * {
-  max-height: 32px;
 }
 .left-corner > p, .right-corner > p {
   padding-left: 0;
@@ -191,16 +189,15 @@ h1 {
 
 i {
   display: block;
-  margin: 20px 0;
   color: #9b3131;
-  font-size: 42px;
+  font-size: 18px;
 }
 
 .card-title {
-  font-size: 54px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .center-text i {
-  font-size: 120px;
+  font-size: 56px;
 }
