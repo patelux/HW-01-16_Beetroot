@@ -772,14 +772,9 @@
     }
     setInterval(() => {
         const cards = document.querySelectorAll('.card');
-        console.log(cards);
         document.querySelector('.card.active') && document.querySelector('.card.active').classList.remove('active');
-        cards[getRandomNumber(1, cards.length)].classList.add('active')
+        cards[getRandomNumber(0, cards.length-1)].classList.add('active')
     }, 2000)
 </script>
 </body>
-
 </html>
-                <!-- <i class="fa-regular fa-club"></i>
-                <i class="fa-solid fa-diamond"></i>
-                <i class="fa-regular fa-spade"></i> -->
